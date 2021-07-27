@@ -38,12 +38,11 @@ pip install -r requirements.txt
 This project is deployed on ainize. You can get queries without cloning.
 
 ```shell
-curl --request POST -d '{"top_k":15,"mode":"search","data":["Marlene Dietrich"]}' -H 'Content-Type: application/json' 'https://master-jina-people-wiki-search-msh1273.endpoint.ainize.ai/search'
+curl --request POST -d '{"top_k":15,"mode":"search","data":["Evelyn"]}' -H 'Content-Type: application/json' 'https://master-jina-people-wiki-search-msh1273.endpoint.ainize.ai/search'
 ```
 Results may not be accurate as the number of documents currently indexed in the workspace is 3000 lines. For more accurate results, increase the number of documents to be indexed!
 
-Where `Marlene Dietrich` is your query.
-
+Where `Evelyn` is your query.
 
 ## FAQ
 
@@ -54,3 +53,7 @@ This data set contains URIs, names of people, and text from Wikipedia pages. You
 ### How can I change basic settings?
 
 Edit `backend_config.py`
+
+
+## Part to be corrected
+Currently the part for top_k cannot be specified in the query. (fixed at 15)
